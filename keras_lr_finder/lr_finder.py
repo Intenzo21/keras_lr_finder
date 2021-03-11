@@ -93,7 +93,7 @@ class LRFinder:
         callback = LambdaCallback(on_batch_end=lambda batch,
                                                       logs: self.on_batch_end(batch, logs))
 
-        self.model.fit(generator=generator,
+        self.model.fit(generator,
                        epochs=epochs,
                        steps_per_epoch=steps_per_epoch,
                        callbacks=[callback],
